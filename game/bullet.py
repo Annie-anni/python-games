@@ -2,7 +2,7 @@ import pygame
 from pygame.sprite import Sprite
 
 class Bullet(Sprite):
-    #Class that manages the firing of bullets from a spacecraft
+
     def __init__(self,ai_settings,screen,ship):
         super().__init__()
         self.screen = screen
