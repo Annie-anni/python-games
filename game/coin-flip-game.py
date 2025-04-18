@@ -7,6 +7,7 @@ while True:
     guess = input("Enter your guess（heads/tails)\n(enter 'q' any time to quit):").lower()
 
     if guess == 'q':
+        print("Thank you for playing! 🥰")
         break
 
     if guess != 'heads' and guess != 'tails':
@@ -24,5 +25,5 @@ while True:
 
     again = input("\n🔁 Try again? yes/no:").lower()
     if not again.startswith('y'):
-        print("Goodbye!")
+        print("Thank you for playing! See yu next time 🥰")
         break
