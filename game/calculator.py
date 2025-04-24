@@ -1,3 +1,5 @@
+import random
+
 def add(x,y):
     return x + y
 
@@ -13,7 +15,7 @@ def divide(x,y):
     return x / y
 
 def main():
-    print("===🧮 Simple Calculator 🧮===")
+    print("=== 🚬 Welcome to the Friendly Calculator 🚬 ===")
     print("Select operation:")
     print("1. ➕ Addition")
     print("2. ➖ Subtraction")
@@ -23,14 +25,19 @@ def main():
     while True:
         choice = input("Enter choice(1-4):")
         if choice not in ["1","2","3","4"]:
-            print(" 🤦‍♂️ Invalid input. Please enter a num between 1 and 4")
+            print(random.choice([" 🤦 Is it difficult to enter 1,2,3,4?",
+                                 "The option you entered is like ordering a washing machine at a pizza place"
+                                 " - it's not on the menu 📋 ",
+                                 "Wow This choice is as reasonable as using a banana to make a phone call 🍌"]))
+
         else:
             break
     try:
         num1 = float(input("Enter first number:"))
         num2 = float(input("Enter second number:"))
     except ValueError:
-        print("🙅‍♀️ Error! Please enter valid numbers!")
+        print(random.choice(["Bro I am a calculator. You know what a calculator does, right?",
+                             "If you make the same mistake again, I'll put your head on a leash."]))
         return
 
     if choice == "1":
@@ -45,9 +52,9 @@ def main():
     elif choice == "4":
         print(f"{num1} / {num2} = {divide(num1, num2)}")
 
-    again = input("\n😉 Do you want to perform another calculation?(yes/no):").lower()
+    again = input("\n 💴 Trial ends. Please recharge VIP (yes/no):").lower()
     if not again.startswith("y"):
-        print("Thanks for using calculator! Goodbye 👋")
+        print("Poor guy")
         return
     else:
         main()
