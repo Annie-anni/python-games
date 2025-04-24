@@ -3,7 +3,10 @@ import random
 print("\n=== 🔤 GUESS THE WORD 🔤 ===")
 print(" ✨ Unscramble the letters to find the word ✨ ")
 
-words = ["python","coding","game","computer","learn","university","favorite"]
+words = ["python","coding","game","computer","learn","university","favorite",
+                "guitar", "puzzle", "jacket", "rabbit",
+    "garden", "rocket", "dragon", "planet", "orange",
+    "monkey", "turtle", "coffee", "window", "bottle"]
 
 while True:
     original_word = random.choice(words) #Randomly select a word from the word list
@@ -15,10 +18,13 @@ while True:
     guess = input(" 🤔 What's the word?:").lower()
 
     if guess == original_word:
-        print("🎉 Congrats! You win!")
+        print(random.choice(["Correct! 😤 Next game, my vocabulary will be upgraded to Shakespeare level",
+                             "🐍 You guessed python... but you still can't escape my ridicule"]))
     else:
-        print(f"😢 Sorry,the word was {original_word}")
-    again = input("Play again?(yes/no):").lower()
+        print(random.choice([f"📉 Your vocabulary makes me want to donate a dictionary to you.\nThe word was {original_word}",
+                             f"🤏 Is that all? My grandma can guess better than you.\nThe word was {original_word}"]))
+    again = input("🍕 You can lose 3 more games before the pizza is delivered! Continue? (Y/N):").lower()
     if not again.startswith("y"):
-        print(" 🥰 Thanks for playing!")
+        print(random.choice(["🧻 Your game records have been used as toilet paper raw materials",
+                             "📉 Your luck value is permanently -10 for running away"]))
         break
